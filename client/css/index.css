@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Carrois+Gothic&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #ffffff;
+    --background-color: #120f16;
+    --table-border: #1e1a24;
+    --start-O-width: 12px;
+    --end-O-width: 86px;
+}
+
+body {
+    backdrop-filter: blur(35px);
+    background-color: #1e0d35;
+    background-image: radial-gradient(circle, #1e3128, #354f61, #261e31 );
+}
+
+#form-header {
+    font-family: 'Bebas Neue', sans-serif;
+    animation: long-O-padding 0.8s forwards;
+
+    > span {
+        width: var(--start-O-width);
+        animation: long-O 0.8s forwards;
+    }
+}
+
+#app-container {
+    #form-box {
+        #form {
+
+            > div {
+                position: relative;
+                padding: 5px;
+                margin: 10px 0;
+            
+                > label {
+                    position: absolute;
+                    top: -5px;
+                    left: 20px;
+                    padding: 0 5px;
+                    color: white;
+                    background-color: var(--background-color);
+                    font-size: 22px;
+                    font-family: 'Bebas Neue', sans-serif;
+                }
+
+                > input[type="file"] {
+                    padding-top: 23px;
+                    cursor: pointer;
+                }
+
+                #pass-file-label {
+                    cursor: pointer;
+                }
+
+                > input[type="file"]::file-selector-button {
+                    display: none;
+                }
+            
+                > input {
+                    width: 500px;
+                    height: 65px;
+                    padding: 0 47px 0 18px;
+                    border-radius: 5px;
+                    color: white;
+                    border: rgb(68, 68, 68) solid 2px;
+                    background-color: var(--background-color);
+                    font-family: 'Carrois Gothic', sans-serif;
+                    font-size: 16px;
+                    outline: none;
+                }
+            
+                > input:focus {
+                    border: white solid 2px;
+                }
+            
+                > img {
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translate(0, -50%);
+                    cursor: pointer;
+                    z-index: 2;
+                }
+            }
+
+            #login-submit-div {
+                margin-top: 20px !important;
+                display: flex;
+
+                > button {
+                    font-family: 'Bebas Neue', sans-serif;
+                    border: rgb(68, 68, 68) solid 2px;
+                    background-color: rgba(18, 15, 22, 0);
+                }
+
+                > button:hover {
+                    border: rgb(255, 255, 255) solid 2px;
+                }
+
+                #login-form-err {
+                    width: 360px;
+                    color: #ff4f4f;
+                    font-size: 21px;
+                    font-family: 'Bebas Neue', sans-serif;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    /* 
+        TABLE BOX
+    */
+    #table-box {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 100px);
+        height: calc(100% - 100px);
+        padding: 50px 30px;
+        border-radius: 15px;
+        background-color: var(--background-color);
+
+        #table-background {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            border: 2px solid var(--table-border);
+            overflow: auto;
+
+            > table {
+                width: 100%;
+                padding: 15px;
+    
+                > tbody{
+                    > tr {
+                        height: 30px;
+                        padding: 6px;
+    
+                        > td {
+                            padding: 6px;
+                            text-align: left;
+                            color: var(--white);
+                        }
+                    }
+                }
+            }
+        }
+
+        #pass-input-form-box {
+            display: none;
+        }
+    }
+}
+
+/* 
+    FORM BOX ANIMATIONS
+*/
+@keyframes long-O {
+    from {width: var(--start-O-width);}
+    to {width: var(--end-O-width);}
+}
+
+@keyframes long-O-padding {
+    from {padding: 0 calc( (var(--end-O-width) - var(--start-O-width)) / 2 );}
+    to {padding: 0;}
+}

@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "module": "ES2022",
+        "outDir": "client/js",
+        "moduleDetection": "auto"
+    },
+    "include": ["client/ts/**/*"],
+    "exclude": ["server/ts/**/*"]
+}
