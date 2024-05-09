@@ -32,7 +32,7 @@ export function isLoginFormValid() {
         case isInputInvalid(keyInputValue): errText = "Key includes unsupported characters. Only ASCII characters are supported."; break;
         case includesSplitter(idInputValue): errText = "ID includes forbidden group of characters. ('(X,,X)' or '!<0~0>!')"; break;
         case includesSplitter(keyInputValue): errText = "Key includes forbidden group of characters. ('(X,,X)' or '!<0~0>!')"; break;
-        case idInputValue.length < 6: errText = "Salt is too short. (min = 6; recom = 10+)"; break;
+        case idInputValue.length < 6: errText = "ID is too short. (min = 6; recom = 10+)"; break;
         case keyInputValue.length < 10: errText = "Key is too short. (min = 10; recom = 20+)"; break;
         case keyInputValue !== keyRepeatInputValue: errText = "Keys do not match."; break;
     }

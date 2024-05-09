@@ -8,6 +8,9 @@
 # package lock
 package-lock.json
 
+# raw assets
+raw_assets
+
 # Logs
 logs
 *.log
