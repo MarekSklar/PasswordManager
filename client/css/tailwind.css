@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'BebasNeueFont';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../assets/fonts/bebas_neue/BebasNeue-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'CarroisGothicFont';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../assets/fonts/carrois_gothic/CarroisGothic-Regular.ttf) format('truetype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

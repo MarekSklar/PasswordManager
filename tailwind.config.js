@@ -35,6 +35,10 @@ module.exports = {
       "black": "#000",
       "transparent": "transparent"
     },
+    fontFamily: {
+      BebasNeue: ["BebasNeueFont", "sans-serif"],
+      CarroisGothic: ["CarroisGothicFont", "sans-serif"],
+    },
     extend: {
       width: {
         "wfa": "-webkit-fill-available"
