@@ -14,54 +14,17 @@ body {
     background-image: radial-gradient(circle, #1e3128, #354f61, #261e31 );
 }
 
-#form-header {
-    animation: long-O-padding 0.8s forwards;
-
-    > span {
-        width: var(--start-O-width);
-        animation: long-O 0.8s forwards;
-    }
-}
-
 #app-container {
     #form-box {
         #form {
-
             > div {
-                position: relative;
-                padding: 5px;
-                margin: 10px 0;
-            
-                > label {
-                    position: absolute;
-                    top: -5px;
-                    left: 20px;
-                    padding: 0 5px;
-                    color: white;
-                    background-color: var(--background-color);
-                    font-size: 22px;
-                    font-family: 'Bebas Neue', sans-serif;
-                }
-
-                > input[type="file"] {
-                    padding-top: 23px;
-                    cursor: pointer;
-                }
-
-                #pass-file-label {
-                    cursor: pointer;
-                }
 
                 > input[type="file"]::file-selector-button {
                     display: none;
                 }
             
                 > input {
-                    width: 500px;
-                    height: 65px;
-                    padding: 0 47px 0 18px;
                     border-radius: 5px;
-                    color: white;
                     border: rgb(68, 68, 68) solid 2px;
                     background-color: var(--background-color);
                     font-family: 'Carrois Gothic', sans-serif;
@@ -76,7 +39,6 @@ body {
                 > img {
                     position: absolute;
                     top: 50%;
-                    right: 20px;
                     transform: translate(0, -50%);
                     cursor: pointer;
                     z-index: 2;
@@ -151,17 +113,4 @@ body {
             display: none;
         }
     }
-}
-
-/* 
-    FORM BOX ANIMATIONS
-*/
-@keyframes long-O {
-    from {width: var(--start-O-width);}
-    to {width: var(--end-O-width);}
-}
-
-@keyframes long-O-padding {
-    from {padding: 0 calc( (var(--end-O-width) - var(--start-O-width)) / 2 );}
-    to {padding: 0;}
 }

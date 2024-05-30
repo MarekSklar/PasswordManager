@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: 'BebasNeueFont';
     font-style: normal;
@@ -12,6 +16,14 @@
     src: url(../../assets/fonts/carrois_gothic/CarroisGothic-Regular.ttf) format('truetype');
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.form-input-box {
+    @apply relative my-2 p-1.5;
+}
+
+.form-label {
+    @apply absolute -top-1 left-5 px-1.5 text-xl font-BebasNeue text-heather-100 bg-heather-900;
+}
+
+.form-input {
+    @apply w-112 h-16 pr-12 pl-4 text-white;
+}

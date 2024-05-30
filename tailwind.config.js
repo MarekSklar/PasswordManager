@@ -48,6 +48,20 @@ module.exports = {
         128: "32rem",
         160: "40rem",
         192: "48rem"
+      },
+      animation: {
+        longO: "longO 0.8s forwards",
+        longOPadding: "longOPadding 0.8s forwards"
+      },
+      keyframes: {
+        longO: {
+          from: { width: "12px" },
+          to: { width: "86px" }
+        },
+        longOPadding: {
+          from: { padding: "0 calc( (86px - 12px) / 2 )" },
+          to: { padding: "0" }
+        }
       }
     },
   },
