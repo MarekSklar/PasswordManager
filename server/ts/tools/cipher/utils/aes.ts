@@ -1,6 +1,6 @@
 import EncryptLoop from "./encryptLoop";
 import DecryptLoop from "./decryptLoop";
-import { GaloisFields, Key } from "../../../customTypes";
+import { GaloisFields, Key } from "../../../../../shared/customTypes";
 
 
 export default class Aes {

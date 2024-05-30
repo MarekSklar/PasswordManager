@@ -1,4 +1,4 @@
-import { GaloisField, GaloisFields } from "../customTypes";
+import { GaloisField, GaloisFields } from "../../../shared/customTypes";
 import { binToHex, hextoBin } from "./convert";
 
 export function binariseGF(GF: GaloisField) {

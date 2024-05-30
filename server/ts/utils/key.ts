@@ -1,4 +1,4 @@
-import { FieldKey, Key } from "../customTypes";
+import { FieldKey, Key } from "../../../shared/customTypes";
 import { Hash } from "../tools/hash/main";
 
 export async function hashKey(key: string, id: string, dataLength: number, iterations: number, parallelism: number) {

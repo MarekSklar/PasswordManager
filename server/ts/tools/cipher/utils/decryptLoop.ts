@@ -1,4 +1,4 @@
-import { GaloisField, inverseSBox } from "../../../customTypes";
+import { GaloisField, inverseSBox } from "../../../../../shared/customTypes";
 import { binariseGF, hexadecimaliseGF, processTextIntoGFs } from "../../../utils/galoisField";
 import { xor } from "../../../utils/operation";
 

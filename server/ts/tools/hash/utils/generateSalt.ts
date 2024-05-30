@@ -1,4 +1,4 @@
-import { ASCII } from "../../../customTypes";
+import { ASCII } from "../../../../../shared/customTypes";
 
 export function generateSalt(text: string, key: string) {
 

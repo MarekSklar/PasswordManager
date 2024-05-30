@@ -1,4 +1,4 @@
-import { ASCII, Data, bigSplitter, smallSplitter} from "../customTypes";
+import { ASCII, Data, bigSplitter, smallSplitter} from "../../../shared/customTypes";
 import { hexToText, textToHex } from "./convert";
 import { randomString, randomNum } from "./random";
 

@@ -1,5 +1,5 @@
 import argon2 from 'argon2-browser';
-import { Key } from '../../customTypes';
+import { Key } from '../../../../shared/customTypes';
 import { textToUint8Array } from '../../utils/convert';
 import { generateSalt } from './utils/generateSalt';
 import { divideToFieldKeys } from '../../utils/key';

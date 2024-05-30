@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "passwordmanager",
   "type": "commonjs",
-  "main": "server/js/index.js",
+  "main": "server/js/server/ts/index.js",
   "scripts": {
     "dev": "electron .",
     "build": "tsc -p tsconfig.server.json && tsc -p tsconfig.client.json",

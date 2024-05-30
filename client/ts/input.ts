@@ -1,4 +1,4 @@
-import { ASCII, bigSplitter, smallSplitter } from "./customTypes.js";
+import { ASCII, bigSplitter, smallSplitter } from "../../shared/customTypes.js";
 
 export function isLoginFormValid() {
 
