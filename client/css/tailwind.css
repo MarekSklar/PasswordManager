@@ -31,3 +31,9 @@
 .form-image {
     @apply absolute z-10 top-1/2 right-4 -translate-y-1/2 cursor-pointer;
 }
+
+body {
+    backdrop-filter: blur(35px);
+    background-color: #1e0d35;
+    background-image: radial-gradient(circle, #1e3128, #354f61, #261e31 );
+}
