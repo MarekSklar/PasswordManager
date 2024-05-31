@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Carrois+Gothic&display=swap');
-
 :root {
     --white: #ffffff;
     --background-color: #120f16;
@@ -15,60 +13,6 @@ body {
 }
 
 #app-container {
-    #form-box {
-        #form {
-            > div {
-
-                > input[type="file"]::file-selector-button {
-                    display: none;
-                }
-            
-                > input {
-                    border-radius: 5px;
-                    border: rgb(68, 68, 68) solid 2px;
-                    background-color: var(--background-color);
-                    font-family: 'Carrois Gothic', sans-serif;
-                    font-size: 16px;
-                    outline: none;
-                }
-            
-                > input:focus {
-                    border: white solid 2px;
-                }
-            
-                > img {
-                    position: absolute;
-                    top: 50%;
-                    transform: translate(0, -50%);
-                    cursor: pointer;
-                    z-index: 2;
-                }
-            }
-
-            #login-submit-div {
-                margin-top: 20px !important;
-                display: flex;
-
-                > button {
-                    font-family: 'Bebas Neue', sans-serif;
-                    border: rgb(68, 68, 68) solid 2px;
-                    background-color: rgba(18, 15, 22, 0);
-                }
-
-                > button:hover {
-                    border: rgb(255, 255, 255) solid 2px;
-                }
-
-                #login-form-err {
-                    width: 360px;
-                    color: #ff4f4f;
-                    font-size: 21px;
-                    font-family: 'Bebas Neue', sans-serif;
-                    margin-left: 30px;
-                }
-            }
-        }
-    }
 
     /* 
         TABLE BOX

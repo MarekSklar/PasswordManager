@@ -14,37 +14,31 @@
         <a href="index.html">back</a>
         <div id="form-box" class="flex flex-col items-center p-12 rounded-2xl bg-heather-900">
             <h1 id="form-header" class="h-fit text-center text-3xl tracking-wide text-white font-BebasNeue animate-longOPadding">
-                This is the situation, when l<span class="inline-block h-[21px] mx-0.5 border-4 border-white rounded-lg animate-longO"></span>nger is better...
+                Welcome back!
             </h1>
-            <div id="form" class="mt-5">
-                <div class="input-box">
-                    <label class="label text-white" class="cursor-pointer">File with passwords</label>
-                    <input type="file" required="txt" accept=".txt" class="pt-6 cursor-pointer">
+            <div class="mt-5">
+                <div class="form-input-box">
+                    <label class="form-label cursor-pointer">File with passwords</label>
+                    <input type="file" required="txt" accept=".txt" class="form-input pt-5 cursor-pointer file:hidden">
                 </div>
-                <div class="input-box">
-                    <label class="label" for="id-input">ID</label>
-                    <input id="id-input" name="id-input" type="text">
-                    <img id="id-visible" src="../img/visibility.svg">
+                <div class="form-input-box">
+                    <label class="form-label">ID</label>
+                    <input class="form-input">
+                    <img class="form-image" src="../img/visibility.svg">
                 </div>
-                <div class="input-box">
-                    <label class="label" for="key-input">Key</label>
-                    <input id="key-input" name="key-input" type="password">
+                <div class="form-input-box">
+                    <label class="form-label">Key</label>
+                    <input class="form-input" type="password">
                 </div>
-                <div class="input-box" id="login-submit-div">
-                    <button id="submit-login-form" class="flex items-center justify-center w-24 h-10 text-xl text-white rounded cursor-pointer">Decipher</button>
-                    <p id="login-form-err"></p>
+                <div class="flex mt-5">
+                    <button class="flex items-center justify-center w-24 h-10 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 font-BebasNeue text-white bg-heather-900 cursor-pointer">Decipher</button>
+                    <p class="w-80 ml-3 text-xl font-BebasNeue text-red-400"></p>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <style>
-.input-box {
-    @apply relative my-2 p-1.5;
-}
 
-.label {
-    @apply absolute -top-1 left-5 px-1.5 text-xl font-BebasNeue text-white bg-heather-900;
-}
 </style>
 </html>
