@@ -4,75 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklar's Password manager</title>
+    <link rel="stylesheet" href="../css/tailwindBuild.css">
 </head>
 <body>
-    <div id="table-box">
-        <div id="table-background">
-            <table>
-                <tr>
-                    <td>namecheap</td>
-                    <td>ultramega@proton.mail</td>
-                    <td>paperwork, finance</td>
-                    <td>veryLongPasswordAsItShouldBe</td>
-                </tr>
-                <tr>
-                    <td>name----------------</td>
-                    <td>login------------------</td>
-                    <td>tag--------------</td>
-                    <td>password------------------------</td>
-                </tr>
-            </table>
-        </div>
-        <div id="pass-input-form-box">
-            <div class="pass-input-form">
-                <input class="pass-input pass-input-name">
-                <input class="pass-input pass-input-login">
-                <input class="pass-input pass-input-tag">
-                <input class="pass-input pass-input-text">
+    <div id="app-container" class="flex items-center justify-center w-full h-screen">
+        <a href="index.html">back</a>
+        <div id="form-box" class="flex flex-col items-center px-20 py-12 rounded-2xl bg-heather-900">
+            <div>
+                <div>
+                    <table class="data-table">
+                        <tr>
+                            <td>tag</td>
+                            <td>name</td>
+                            <td>username</td>
+                            <td>password</td>
+                        </tr>
+                        <tr>
+                            <td>tagaafafaf</td>
+                            <td>name</td>
+                            <td>usernameafafafafafa</td>
+                            <td>password</td>
+                        </tr>
+                        <tr>
+                            <td>tag</td>
+                            <td>nameasfafafafa</td>
+                            <td>username</td>
+                            <td>passwordafafafafaf</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <div class="hidden">
+                        <input class="pass-input pass-input-name">
+                        <input class="pass-input pass-input-login">
+                        <input class="pass-input pass-input-tag">
+                        <input class="pass-input pass-input-text">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
 <style>
-#table-box {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: calc(100% - 100px);
-    height: calc(100% - 100px);
-    padding: 50px 30px;
-    border-radius: 15px;
-    background-color: var(--background-color);
 
-    #table-background {
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        border: 2px solid var(--table-border);
-        overflow: auto;
-
-        > table {
-            width: 100%;
-            padding: 15px;
-
-            > tbody{
-                > tr {
-                    height: 30px;
-                    padding: 6px;
-
-                    > td {
-                        padding: 6px;
-                        text-align: left;
-                        color: var(--white);
-                    }
-                }
-            }
-        }
-    }
-
-    #pass-input-form-box {
-        display: none;
-    }
-}
 </style>
 </html>

@@ -16,6 +16,12 @@
     src: url(../../assets/fonts/carrois_gothic/CarroisGothic-Regular.ttf) format('truetype');
 }
 
+body {
+    backdrop-filter: blur(35px);
+    background-color: #1e0d35;
+    background-image: radial-gradient(circle, #1e3128, #354f61, #261e31 );
+}
+
 .form-input-box {
     @apply relative my-6;
 }
@@ -32,8 +38,18 @@
     @apply absolute z-10 top-1/2 right-4 -translate-y-1/2 cursor-pointer;
 }
 
-body {
-    backdrop-filter: blur(35px);
-    background-color: #1e0d35;
-    background-image: radial-gradient(circle, #1e3128, #354f61, #261e31 );
+.data-table {
+    @apply w-auto;
+
+    tr {
+        @apply w-auto;
+
+        td {
+            @apply py-2 px-3 text-heather-100;
+        }
+    }
+
+    tr:nth-child(odd) {
+        @apply bg-heather-950;
+    }
 }
