@@ -43,6 +43,7 @@ npm run style - auto translating tailwind classes, needs to be run in separate c
 * [asciitable.com: ASCII table](https://www.asciitable.com/)
 
 ### Archived chatGPT chats
+* [Electron Storage Locations](https://chatgpt.com/share/3f0f3a21-cff0-42c1-9a95-3e492a0bc342)
 * [Hash Functions for Key Generation](https://chatgpt.com/share/5e6e8ac7-c2fa-4f4d-8069-957b771f13c4)
 * [Argon2i vs Argon2id](https://chatgpt.com/share/17e18f54-2115-4cfe-a16f-281fc552ee05)
 
