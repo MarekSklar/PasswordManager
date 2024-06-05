@@ -1,0 +1,23 @@
+.data-table {
+    @apply mx-4;
+
+    tr {
+        @apply first:border-b-2 first:border-heather-200 first:border-opacity-10;
+
+        th, td {
+            @apply min-w-[15vw] py-2 px-3 text-heather-100 last:min-w-0 last:flex last:gap-3;
+
+            img {
+                @apply cursor-pointer;
+            }
+        }
+
+        th {
+            @apply text-left;
+        }
+    }
+
+    tr:nth-child(odd) {
+        @apply bg-heather-950;
+    }
+}

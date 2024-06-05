@@ -1,3 +1,6 @@
+@import url(styles/form.css);
+@import url(styles/table.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,46 +23,4 @@ body {
     backdrop-filter: blur(35px);
     background-color: #1e0d35;
     background-image: radial-gradient(circle, #1e3128, #354f61, #261e31 );
-}
-
-/* form */
-.form-input-box {
-    @apply relative my-6;
-}
-
-.form-label {
-    @apply absolute -top-3 left-5 px-1.5 text-xl font-BebasNeue text-heather-100 bg-heather-900;
-}
-
-.form-input {
-    @apply w-112 h-16 pr-12 pl-4 text-base rounded-md outline-none border-2 border-solid border-heather-300 focus:border-heather-100 font-CarroisGothic text-white bg-heather-900;
-}
-
-.form-image {
-    @apply absolute z-10 top-1/2 right-4 -translate-y-1/2 cursor-pointer;
-}
-
-/* table */
-.data-table {
-    @apply mx-4;
-
-    tr {
-        @apply first:border-b-2 first:border-heather-200 first:border-opacity-10;
-
-        th, td {
-            @apply min-w-[15vw] py-2 px-3 text-heather-100 last:min-w-0 last:flex last:gap-3;
-
-            img {
-                @apply cursor-pointer;
-            }
-        }
-
-        th {
-            @apply text-left;
-        }
-    }
-
-    tr:nth-child(odd) {
-        @apply bg-heather-950;
-    }
 }

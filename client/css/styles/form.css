@@ -1,0 +1,15 @@
+.form-input-box {
+    @apply relative my-6;
+}
+
+.form-label {
+    @apply absolute -top-3 left-5 px-1.5 text-xl font-BebasNeue text-heather-100 bg-heather-900;
+}
+
+.form-input {
+    @apply w-112 h-16 pr-12 pl-4 text-base rounded-md outline-none border-2 border-solid border-heather-300 focus:border-heather-100 font-CarroisGothic text-white bg-heather-900;
+}
+
+.form-image {
+    @apply absolute z-10 top-1/2 right-4 -translate-y-1/2 cursor-pointer;
+}
