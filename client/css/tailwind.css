@@ -22,6 +22,7 @@ body {
     background-image: radial-gradient(circle, #1e3128, #354f61, #261e31 );
 }
 
+/* form */
 .form-input-box {
     @apply relative my-6;
 }
@@ -38,14 +39,23 @@ body {
     @apply absolute z-10 top-1/2 right-4 -translate-y-1/2 cursor-pointer;
 }
 
+/* table */
 .data-table {
-    @apply w-auto;
+    @apply mx-4;
 
     tr {
-        @apply w-auto;
+        @apply first:border-b-2 first:border-heather-200 first:border-opacity-10;
 
-        td {
-            @apply py-2 px-3 text-heather-100;
+        th, td {
+            @apply min-w-[15vw] py-2 px-3 text-heather-100 last:min-w-0 last:flex last:gap-3;
+
+            img {
+                @apply cursor-pointer;
+            }
+        }
+
+        th {
+            @apply text-left;
         }
     }
 
