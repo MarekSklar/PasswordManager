@@ -22,7 +22,7 @@ export function isLoginFormValid() {
     
     const idInputValue = (document.getElementById("id-input") as HTMLInputElement).value;
     const keyInputValue = (document.getElementById("key-input") as HTMLInputElement).value;
-    const keyRepeatInputValue = (document.getElementById("key-repeat-input") as HTMLInputElement).value;
+    //const keyRepeatInputValue = (document.getElementById("key-repeat-input") as HTMLInputElement).value;
 
     const errTextElmnt = document.getElementById("login-form-err");
     let errText = "";
@@ -34,7 +34,7 @@ export function isLoginFormValid() {
         case includesSplitter(keyInputValue): errText = "Key includes forbidden group of characters. ('(X,,X)' or '!<0~0>!')"; break;
         case idInputValue.length < 6: errText = "ID is too short. (min = 6; recom = 10+)"; break;
         case keyInputValue.length < 10: errText = "Key is too short. (min = 10; recom = 20+)"; break;
-        case keyInputValue !== keyRepeatInputValue: errText = "Keys do not match."; break;
+        //case keyInputValue !== keyRepeatInputValue: errText = "Keys do not match."; break;
     }
 
     errTextElmnt.innerHTML = errText;

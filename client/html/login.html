@@ -18,20 +18,20 @@
             <div class="mt-5">
                 <div class="form-input-box">
                     <label class="form-label cursor-pointer">File with passwords</label>
-                    <input type="file" required="txt" accept=".txt" class="form-input pt-5 cursor-pointer file:hidden">
+                    <input id="pass-file" type="file" required="txt" accept=".txt" class="form-input pt-5 cursor-pointer file:hidden">
                 </div>
                 <div class="form-input-box">
                     <label class="form-label">ID</label>
-                    <input class="form-input">
-                    <img class="form-image" src="../img/visibility.svg">
+                    <input id="id-input" class="form-input">
+                    <img id="id-visible" class="form-image" src="../img/visibility.svg">
                 </div>
                 <div class="form-input-box">
                     <label class="form-label">Key</label>
-                    <input class="form-input" type="password">
+                    <input id="key-input" class="form-input" type="password">
                 </div>
                 <div class="flex mt-5">
-                    <button class="flex items-center justify-center w-24 h-10 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 font-BebasNeue text-white bg-heather-900 cursor-pointer">Decipher</button>
-                    <p class="w-80 ml-3 text-xl font-BebasNeue text-red-400"></p>
+                    <button id="submit-login-form" class="flex items-center justify-center w-24 h-10 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 font-BebasNeue text-white bg-heather-900 cursor-pointer">Decipher</button>
+                    <p id="login-form-err" class="w-80 ml-3 text-xl font-BebasNeue text-red-400"></p>
                 </div>
             </div>
         </div>

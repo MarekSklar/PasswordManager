@@ -21,10 +21,10 @@ export function addEventListenerToSubmitLoginForm() {
 
         const idInputValue = (document.getElementById("id-input") as HTMLInputElement).value;
         const keyInputValue = (document.getElementById("key-input") as HTMLInputElement).value;
-        const keyRepeatInputValue = (document.getElementById("key-repeat-input") as HTMLInputElement).value;
+        // const keyRepeatInputValue = (document.getElementById("key-repeat-input") as HTMLInputElement).value;
         const fileInput = document.getElementById("pass-file") as HTMLInputElement;
 
-        if (document.getElementById("login-form-err").innerHTML.length > 0 || idInputValue.length === 0 || keyInputValue.length === 0 || keyRepeatInputValue.length === 0) return;
+        if (document.getElementById("login-form-err").innerHTML.length > 0 || idInputValue.length === 0 || keyInputValue.length === 0 /* || keyRepeatInputValue.length === 0 */) return;
 
         function getFileContent(): Promise<string> | string {
             const files = fileInput.files;
@@ -62,6 +62,7 @@ export function addEventListenerToSubmitLoginForm() {
         keyInput.setAttribute("type", "password");
 
         // reset key repeat value
+        /*
         const keyRepeatInput = document.getElementById("key-repeat-input") as HTMLInputElement;
         keyRepeatInput.value = "";
         keyRepeatInput.setAttribute("type", "password");
@@ -71,7 +72,7 @@ export function addEventListenerToSubmitLoginForm() {
 
         // unhide table
         document.getElementById("table-box").style.display = "flex";
-
+        */
 
         login(idInputValue, keyInputValue, getFileContent());
     });
@@ -81,5 +82,5 @@ export function addEventListenerToLoginFormChange() {
 
     document.getElementById("id-input").addEventListener("change", _ => isLoginFormValid());
     document.getElementById("key-input").addEventListener("change", _ => isLoginFormValid());
-    document.getElementById("key-repeat-input").addEventListener("change", _ => isLoginFormValid());
+    //document.getElementById("key-repeat-input").addEventListener("change", _ => isLoginFormValid());
 }
