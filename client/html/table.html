@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklar's Password manager</title>
     <link rel="stylesheet" href="../css/tailwindBuild.css">
+    <script defer type="module" src="../js/client/ts/table/main.js"></script>
 </head>
 <body>
     <div id="app-container" class="flex items-center justify-center w-full h-screen">
@@ -14,39 +15,12 @@
                 <div class="m-6 mt-8">
                     <h1 class="h-fit text-center text-3xl mb-4 tracking-wide text-white font-BebasNeue">Your beautiful passwords</h1>
                     <div class="max-h-[75vh] rounded-lg overflow-y-auto">
-                        <table class="data-table">
+                        <table id="data-table" class="data-table">
                             <tr>
                                 <th>Name</th>
                                 <th>Username</th>
                                 <th>Password</th>
                                 <th></th>
-                            </tr>
-                            <tr>
-                                <td>name</td>
-                                <td>username</td>
-                                <td>password</td>
-                                <td>
-                                    <img src="../img/visibility_off.svg">
-                                    <img src="../img/edit.svg">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>name</td>
-                                <td>usernameafafafafafa</td>
-                                <td>password</td>
-                                <td>
-                                    <img src="../img/visibility_off.svg">
-                                    <img src="../img/edit.svg">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>nameasfafafafa</td>
-                                <td>username</td>
-                                <td>passwordafafafafaf</td>
-                                <td>
-                                    <img src="../img/visibility_off.svg">
-                                    <img src="../img/edit.svg">
-                                </td>
                             </tr>
                         </table>
                     </div>

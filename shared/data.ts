@@ -1,19 +1,18 @@
-import { ASCII, Data, bigSplitter, smallSplitter} from "../../../shared/customTypes";
-import { hexToText, textToHex } from "./convert";
-import { randomString, randomNum } from "./random";
+import { ASCII, Data, bigSplitter, smallSplitter} from "./customTypes.js";
+import { hexToText, textToHex } from "../server/ts/utils/convert.js";
+import { randomString, randomNum } from "../server/ts/utils/random.js";
 
 export function normalizeData(data: string) {
     
     const length = data.length;
     const remainder = length % 16;
-    const splitter = "!<0~0>!";
     let adderNum = 0;
     let adderText = "";
 
-    adderNum = (16 - remainder) + ((length < 32) ? randomNum(3, 6, 16) : randomNum(1, 3, 16)) - splitter.length;
+    adderNum = (16 - remainder) + ((length < 32) ? randomNum(3, 6, 16) : randomNum(1, 3, 16)) - bigSplitter.length;
     adderText = randomString(adderNum, ASCII);
 
-    return data + splitter + adderText;
+    return data + bigSplitter + adderText;
 }
 
 export function normalizeHex(hex: string) {
