@@ -11,5 +11,13 @@ export async function register(id: string, key: string) {
 
     sessionStorage.setItem("data", dataInText);
 
+    const blob = new Blob([dataInText], {type: 'application/txt'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `pass-file.txt`;
+    link.click();
+    URL.revokeObjectURL(url);
+
     window.location.href = "table.html";
 }
