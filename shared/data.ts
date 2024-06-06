@@ -50,7 +50,7 @@ export function processData(dataText: string, skipGibberish: boolean = false) {
     
     for (let i = 0; i < dataSplit.length; i++) {
 
-        if (i === dataSplit.length - 1 && skipGibberish) continue;
+        if ((i === dataSplit.length - 1 && skipGibberish) || !dataText.length) continue;
         
         const passwordSplit = dataSplit[i].split(smallSplitter);
         const password = {
