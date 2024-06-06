@@ -27,7 +27,3 @@ export function createNewRecord(row: Password) {
     tableElmnt.appendChild(newRow);
 
 }
-
-function removeRecord() {
-    
-}
