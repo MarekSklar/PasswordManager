@@ -49,7 +49,7 @@ export function addEventListenerToSubmitLoginForm() {
             });
         }
 
-        //login(idInputValue, keyInputValue, getFileContent());
+        login(idInputValue, keyInputValue, getFileContent());
     });
 }
 
