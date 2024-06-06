@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sklar's Password manager</title>
     <link rel="stylesheet" href="../css/tailwindBuild.css">
-    <script defer type="module" src="../js/client/ts/front.js"></script>
+    <script defer type="module" src="../js/client/ts/register/main.js"></script>
 </head>
 <body>
     <div id="app-container" class="flex items-center justify-center w-full h-screen">
@@ -18,20 +18,20 @@
             <div id="form" class="mt-5">
                 <div class="form-input-box">
                     <label class="form-label">ID</label>
-                    <input class="form-input">
-                    <img class="form-image" src="../img/visibility.svg">
+                    <input id="id-input" class="form-input">
+                    <img id="id-visible" class="form-image" src="../img/visibility.svg">
                 </div>
                 <div class="form-input-box">
                     <label class="form-label">Key</label>
-                    <input class="form-input" type="password">
+                    <input id="key-input" class="form-input" type="password">
                 </div>
                 <div class="form-input-box">
                     <label class="form-label">Key repeat</label>
-                    <input class="form-input" type="password">
+                    <input id="key-repeat-input" class="form-input" type="password">
                 </div>
                 <div class="flex mt-5">
-                    <button class="flex items-center justify-center w-24 h-10 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 font-BebasNeue text-white bg-heather-900 cursor-pointer">Create file</button>
-                    <p class="w-80 ml-3 text-xl font-BebasNeue text-red-400"></p>
+                    <button id="submit-login-form" class="flex items-center justify-center w-24 h-10 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 font-BebasNeue text-white bg-heather-900 cursor-pointer">Create file</button>
+                    <p id="login-form-err" class="w-80 ml-3 text-xl font-BebasNeue text-red-400"></p>
                 </div>
             </div>
         </div>
