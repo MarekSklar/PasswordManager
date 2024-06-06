@@ -31,6 +31,7 @@ export function isIdValid() {
     }
 
     errTextElmnt.innerHTML = errText;
+    return !errText.length;
 }
 
 export function isKeyValid() {
@@ -48,4 +49,5 @@ export function isKeyValid() {
     }
 
     errTextElmnt.innerHTML = errText;
+    return !errText.length;
 }
