@@ -5,9 +5,10 @@ export function createTable() {
     const data = sessionStorage.getItem("data");
     const processedData = processData(data, true);
 
-    processedData.forEach(row => {
-        createNewRecord(row);
-    });
+    for (let i = 0; i < processedData.length; i++) {
+        const record = processedData[i];
+        createNewRecord(record, i);
+    }
 
     console.log(processedData);
 }
