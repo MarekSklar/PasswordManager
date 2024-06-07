@@ -1,3 +1,5 @@
+import { hexToText } from "../../../../server/ts/utils/convert.js";
+import { hexData, processData } from "../../../../shared/data.js";
 import { isCompanyValid, isPasswordValid, isUsernameValid } from "./formValidation.js";
 
 export function addEventListenerToPassword() {
@@ -18,18 +20,25 @@ export function addEventListenerToPassword() {
 export function addEventListenerToSubmitForm() {
     document.getElementById("submit-form").addEventListener("click", _ => {
 
+        if (!isCompanyValid()) return;
+        if (!isUsernameValid()) return;
+        if (!isPasswordValid()) return;
+
         const companyInputValue = (document.getElementById("company-input") as HTMLInputElement).value;
         const usernameInputValue = (document.getElementById("username-input") as HTMLInputElement).value;
         const passwordInputValue = (document.getElementById("password-input") as HTMLInputElement).value;
 
-        isCompanyValid();
-        isUsernameValid();
-        isPasswordValid();
+        const editedRecordIndex = sessionStorage.getItem("editedRecordIndex");
 
-        if (document.getElementById("form-err").innerHTML.length > 0) return;
+        const data = sessionStorage.getItem("data");
+        const processedData = processData(data, true);
 
-        console.log(companyInputValue, usernameInputValue, passwordInputValue);
-        
+        processedData[editedRecordIndex] = {name: companyInputValue, login: usernameInputValue, tag: "", text: passwordInputValue};
+
+        const deprocessedData = hexToText(hexData(processedData));
+        sessionStorage.setItem("data", deprocessedData);
+
+        window.location.href = "table.html";
     });
 }
 

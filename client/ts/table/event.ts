@@ -27,7 +27,19 @@ export function toggleRecordVisibility(index: number) {
 }
 
 export function editRecord(index: number) {
-    sessionStorage.setItem("editRecord", `${index}`);
+    sessionStorage.setItem("editedRecordIndex", `${index}`);
 
     window.location.href = "recordEdit.html";
+}
+
+export function addRecord() {
+    document.getElementById("record-add").addEventListener("click", _ => {
+
+        const data = sessionStorage.getItem("data");
+        const dataLength = processData(data, true).length;
+    
+        sessionStorage.setItem("editedRecordIndex", `${dataLength}`);
+    
+        window.location.href = "recordAdd.html"; 
+    });
 }

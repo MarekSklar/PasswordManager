@@ -30,6 +30,7 @@ export function isCompanyValid() {
     }
 
     errTextElmnt.innerHTML = errText;
+    return !errText.length;
 }
 
 export function isUsernameValid() {
@@ -44,6 +45,7 @@ export function isUsernameValid() {
     }
 
     errTextElmnt.innerHTML = errText;
+    return !errText.length;
 }
 
 export function isPasswordValid() {
@@ -58,4 +60,5 @@ export function isPasswordValid() {
     }
 
     errTextElmnt.innerHTML = errText;
+    return !errText.length;
 }
