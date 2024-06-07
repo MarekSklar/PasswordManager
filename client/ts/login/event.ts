@@ -19,12 +19,12 @@ export function addEventListenerToID() {
 export function addEventListenerToSubmitLoginForm() {
     document.getElementById("submit-login-form").addEventListener("click", _ => {
 
+        if (!isIdValid()) return;
+        if (!isKeyValid()) return;
+
         const idInputValue = (document.getElementById("id-input") as HTMLInputElement).value;
         const keyInputValue = (document.getElementById("key-input") as HTMLInputElement).value;
         const fileInput = document.getElementById("pass-file") as HTMLInputElement;
-
-        if (!isIdValid()) return;
-        if (!isKeyValid()) return;
 
         function getFileContent(): Promise<string> | string {
             const files = fileInput.files;

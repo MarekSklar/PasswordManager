@@ -20,11 +20,11 @@ export function addEventListenerToID() {
 export function addEventListenerToSubmitLoginForm() {
     document.getElementById("submit-login-form").addEventListener("click", _ => {
 
-        const idInputValue = (document.getElementById("id-input") as HTMLInputElement).value;
-        const keyInputValue = (document.getElementById("key-input") as HTMLInputElement).value;
-
         if (!isIdValid()) return;
         if (!isKeyValid()) return;
+
+        const idInputValue = (document.getElementById("id-input") as HTMLInputElement).value;
+        const keyInputValue = (document.getElementById("key-input") as HTMLInputElement).value;
 
         register(idInputValue, keyInputValue);
     });
