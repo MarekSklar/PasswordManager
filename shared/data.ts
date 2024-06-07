@@ -26,10 +26,10 @@ export function hexData(data: Data) {
     let dataHex = "";
 
     for (let i = 0; i < data.length; i++) {
-        const pass = data[i];
+        const record = data[i];
 
         if (i !== 0) stringifiedData += bigSplitter;
-        stringifiedData += pass.name + smallSplitter + pass.login + smallSplitter + pass.tag + smallSplitter + pass.text; // stringify pass with splitters
+        stringifiedData += record.company + smallSplitter + record.username + smallSplitter + record.password; // stringify pass with splitters
     }
 
     dataHex = normalizeData(stringifiedData);
@@ -54,10 +54,9 @@ export function processData(dataText: string, skipGibberish: boolean = false) {
         
         const passwordSplit = dataSplit[i].split(smallSplitter);
         const password = {
-            name: passwordSplit[0],
-            login: passwordSplit[1],
-            tag: passwordSplit[2],
-            text: passwordSplit[3]
+            company: passwordSplit[0],
+            username: passwordSplit[1],
+            password: passwordSplit[2]
         }
         
         data.push(password);

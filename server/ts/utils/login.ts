@@ -1,6 +1,5 @@
 import Cipher from "../tools/cipher/main";
-import { hexToText, textToHex } from "./convert";
-import { normalizeData, processData } from "../../../shared/data";
+import { hexToText } from "./convert";
 
 
 export async function login(id: string, key: string, data: string) {

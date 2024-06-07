@@ -7,13 +7,12 @@ export type GaloisField = string[][];
 export type GaloisFields = Array<GaloisField>;
 
 // password
-export type Password = {
-    name: string;
-    tag: string;
-    login: string;
-    text: string;
+export type Record = {
+    company: string;
+    username: string;
+    password: string;
 };
-export type Data = Array<Password>;
+export type Data = Array<Record>;
 
 export const bigSplitter = "!<0~0>!";
 export const smallSplitter = "(X,,X)";

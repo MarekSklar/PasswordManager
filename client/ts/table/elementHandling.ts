@@ -1,7 +1,7 @@
-import { Password } from "../../../shared/customTypes.js";
+import { Record } from "../../../shared/customTypes.js";
 import { editRecord, toggleRecordVisibility } from "./event.js";
 
-export function createNewRecord(record: Password, index: number) {
+export function createNewRecord(record: Record, index: number) {
     // Get the table body element
     const tableElmnt = document.querySelector('#data-table');
             
@@ -10,7 +10,7 @@ export function createNewRecord(record: Password, index: number) {
     
     // Define the content for each cell
     let cellContents = [
-        record.name,
+        record.company,
         "*****",
         "*****"
     ];

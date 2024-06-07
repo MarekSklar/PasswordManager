@@ -1,4 +1,5 @@
 import { hexToText } from "../../../../server/ts/utils/convert.js";
+import { Record } from "../../../../shared/customTypes.js";
 import { hexData, processData } from "../../../../shared/data.js";
 import { isCompanyValid, isPasswordValid, isUsernameValid } from "./formValidation.js";
 
@@ -33,7 +34,7 @@ export function addEventListenerToSubmitForm() {
         const data = sessionStorage.getItem("data");
         const processedData = processData(data, true);
 
-        processedData[editedRecordIndex] = {name: companyInputValue, login: usernameInputValue, tag: "", text: passwordInputValue};
+        processedData[editedRecordIndex] = {company: companyInputValue, username: usernameInputValue, password: passwordInputValue} as Record;
 
         const deprocessedData = hexToText(hexData(processedData));
         sessionStorage.setItem("data", deprocessedData);

@@ -1,4 +1,4 @@
-import { Password } from "../../../../shared/customTypes.js";
+import { Record } from "../../../../shared/customTypes.js";
 import { processData } from "../../../../shared/data.js";
 
 export function loadData() {
@@ -11,11 +11,11 @@ export function loadData() {
     const data = sessionStorage.getItem("data");
     const processedData = processData(data, true);
 
-    if (processedData[editedRecordIndex] === undefined) processedData[editedRecordIndex] = {name: "", login: "", tag: "", text: ""};
+    if (processedData[editedRecordIndex] === undefined) processedData[editedRecordIndex] = {company: "", username: "", password: ""} as Record;
 
-    const record: Password = processedData[editedRecordIndex];
+    const record: Record = processedData[editedRecordIndex];
 
-    companyInput.value = record.name;
-    usernameInput.value = record.login;
-    passwordInput.value = record.text;
+    companyInput.value = record.company;
+    usernameInput.value = record.username;
+    passwordInput.value = record.password;
 }
