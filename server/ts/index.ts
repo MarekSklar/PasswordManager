@@ -1,6 +1,6 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
-import { login } from './utils/login.js';
+import { login, saveData } from './preload/main.js';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.  
 
@@ -29,6 +29,7 @@ app.on('ready', () => {
     createWindow();
 
     ipcMain.handle('login', (_, id: string, key: string, fileContent: string) => login(id, key, fileContent));
+    ipcMain.handle('saveData', (_, id: string, key: string, data: string) => saveData(id, key, data));
 });
 
 app.on('window-all-closed', () => {

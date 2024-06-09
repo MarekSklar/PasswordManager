@@ -1,5 +1,5 @@
 import Cipher from "../tools/cipher/main";
-import { hexToText } from "./convert";
+import { hexToText, textToHex } from "../utils/convert";
 
 
 export async function login(id: string, key: string, data: string) {
@@ -10,4 +10,13 @@ export async function login(id: string, key: string, data: string) {
     console.log("\n\nlogin test", id, key, data, dataInText);
     
     return dataInText;
+}
+
+export async function saveData(id: string, key: string, data: string) {
+
+    const ciphered = await Cipher.encrypt(textToHex(data), key, id);
+
+    console.log("\n\nsave test", id, key, data, ciphered);
+    
+    return ciphered;
 }

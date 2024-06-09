@@ -23,5 +23,5 @@
 body {
     backdrop-filter: blur(35px);
     background-color: #1e0d35;
-    background-image: radial-gradient(circle, #1e3128, #354f61, #261e31 );
+    background-image: radial-gradient(circle, #1e3128, #354f61, #261e31);
 }
