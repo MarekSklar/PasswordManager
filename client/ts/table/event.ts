@@ -1,5 +1,11 @@
 import { processData } from "../../../shared/data.js";
 
+export function saveData() {
+    document.getElementById("save-files").addEventListener("click", _ => {
+        console.log("save files");
+    });
+}
+
 export function toggleRecordVisibility(index: number) {
     const record = document.getElementsByClassName("record")[index];
     const username = document.getElementsByClassName("col1")[index];

@@ -12,6 +12,8 @@ export async function login(id: string, key: string, fileContentPromise: Promise
     const dataInText = await loginBackEnd(id, key, data);
 
     sessionStorage.setItem("data", dataInText);
+    sessionStorage.setItem("id", id);
+    sessionStorage.setItem("key", key);
 
     console.log(dataInText, dataInText, id, key, data);
 
