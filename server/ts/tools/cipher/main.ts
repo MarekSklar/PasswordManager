@@ -9,8 +9,6 @@ export default class Cipher {
 
         const dataLength = text.length;
         const hashedKey = await hashKey(key, id, dataLength, 15, 20);
-
-        console.log(1, processedRawData, hashedKey);
         
         return processGFsIntoText(Aes.encrypt(processedRawData, hashedKey));
     }
@@ -20,8 +18,6 @@ export default class Cipher {
 
         const dataLength = text.length;
         const hashedKey = await hashKey(key, id, dataLength, 15, 20);
-
-        //console.log(2, processedRawData, hashedKey);
         
         return processGFsIntoText(Aes.decrypt(processedRawData, hashedKey));
     }

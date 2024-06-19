@@ -15,7 +15,5 @@ export async function login(id: string, key: string, fileContentPromise: Promise
     sessionStorage.setItem("id", id);
     sessionStorage.setItem("key", key);
 
-    console.log(dataInText, dataInText, id, key, data);
-
     window.location.href = "table.html";
 }

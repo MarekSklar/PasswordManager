@@ -9,6 +9,4 @@ export function createTable() {
         const record = processedData[i];
         createNewRecord(record, i);
     }
-
-    console.log(processedData);
 }
