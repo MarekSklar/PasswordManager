@@ -9,10 +9,10 @@ export function addEventListenerToPassword() {
         const input = document.getElementById("password-input");
 
         if (button.getAttribute("src").includes("off")) {
-            button.setAttribute("src", "../img/visibility.svg");
+            button.setAttribute("src", "../../assets/img/visibility.svg");
             input.setAttribute("type", "text");
         } else {
-            button.setAttribute("src", "../img/visibility_off.svg");
+            button.setAttribute("src", "../../assets/img/visibility_off.svg");
             input.setAttribute("type", "password");
         }
     });

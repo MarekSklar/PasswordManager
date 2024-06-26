@@ -43,14 +43,14 @@ export function toggleRecordVisibility(index: number) {
         username.innerHTML = "*****";
         password.innerHTML = "*****";
 
-        button.src = '../img/visibility_off.svg';
+        button.src = '../../assets/img/visibility_off.svg';
     } else {
         record.classList.add("visible");
 
         username.innerHTML = processedData[index].username;
         password.innerHTML = processedData[index].password;
 
-        button.src = '../img/visibility.svg';
+        button.src = '../../assets/img/visibility.svg';
     }
 }
 

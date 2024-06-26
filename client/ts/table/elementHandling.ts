@@ -32,7 +32,7 @@ export function createNewRecord(record: Record, index: number) {
 
     // visibility button
     const buttonVisibility = document.createElement('img');
-    buttonVisibility.src = '../img/visibility_off.svg';
+    buttonVisibility.src = '../../assets/img/visibility_off.svg';
     buttonVisibility.classList.add("visibility-button");
     buttonVisibility.addEventListener("click", _ => toggleRecordVisibility(index));
 
@@ -40,7 +40,7 @@ export function createNewRecord(record: Record, index: number) {
 
     // edit button
     const buttonEdit = document.createElement('img');
-    buttonEdit.src = '../img/edit.svg';
+    buttonEdit.src = '../../assets/img/edit.svg';
     buttonEdit.classList.add("edit-button");
     buttonEdit.addEventListener("click", _ => editRecord(index));
 
