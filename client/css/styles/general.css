@@ -1,7 +1,8 @@
-.nav-button {
+.nav {
     @apply absolute left-4 top-4 flex gap-2;
 
-    a, div {
-        @apply p-2 bg-heather-800 hover:bg-heather-700 rounded-full cursor-pointer;
-    }
+}
+
+.icon-button {
+    @apply p-2 bg-heather-800 hover:bg-heather-700 rounded-full cursor-pointer;
 }

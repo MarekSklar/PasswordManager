@@ -49,3 +49,22 @@ export function addEventListenerToFormChange() {
     document.getElementById("username-input").addEventListener("change", _ => isUsernameValid());
     document.getElementById("password-input").addEventListener("change", _ => isPasswordValid());
 }
+
+export function deleteRecord() {
+    document.getElementById("record-delete").addEventListener("click", _ => {
+
+        const editedRecordIndex = sessionStorage.getItem("editedRecordIndex");
+
+        const data = sessionStorage.getItem("data");
+        const processedData = processData(data, true);
+
+        processedData.splice(Number(editedRecordIndex), 1);
+
+        console.log(processedData);
+
+        const deprocessedData = hexToText(hexData(processedData));
+        sessionStorage.setItem("data", deprocessedData);
+
+        window.location.href = "table.html";
+    });
+}
