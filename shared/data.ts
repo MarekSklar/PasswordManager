@@ -47,6 +47,8 @@ export function processData(dataText: string, skipGibberish: boolean = false) {
     
     const dataSplit = dataText.split(bigSplitter);
     const data: Data = [];
+
+    if (dataSplit.length === 2 && dataSplit[0].length === 0) return data;
     
     for (let i = 0; i < dataSplit.length; i++) {
 

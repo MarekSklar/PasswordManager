@@ -1,4 +1,4 @@
-import { addEventListenerToFormChange, addEventListenerToPassword, addEventListenerToSubmitForm } from "./event.js";
+import { addEventListenerToFormChange, addEventListenerToPassword, addEventListenerToSubmitForm, deleteRecord } from "./event.js";
 import { loadData } from "./loadData.js";
 
 loadData();
@@ -7,3 +7,4 @@ loadData();
 addEventListenerToPassword();
 addEventListenerToSubmitForm();
 addEventListenerToFormChange();
+deleteRecord();
