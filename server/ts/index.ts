@@ -1,6 +1,7 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
 import { login, saveData } from './preload/main.js';
+import { hexToText, textToHex } from './utils/convert.js';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.  
 

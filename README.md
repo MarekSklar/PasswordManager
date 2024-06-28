@@ -38,8 +38,6 @@ npm run style - auto translating tailwind classes, needs to be run in separate c
 * [Fileformat: complete UTF-8 list](https://www.fileformat.info/info/charset/UTF-8/list.htm)
 * [Wikipedia: Hiragana](https://en.wikipedia.org/wiki/Hiragana)
 * [altcodeunicode.com: Windows Alt Codes for Special Characters, Signs & Symbols](https://altcodeunicode.com/)
-
-### Other
 * [asciitable.com: ASCII table](https://www.asciitable.com/)
 
 ### Archived chatGPT chats
