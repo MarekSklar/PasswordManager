@@ -15,5 +15,5 @@
 }
 
 .form-submit {
-    @apply px-5 py-1 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 font-BebasNeue text-white cursor-pointer;
+    @apply px-5 py-1 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 text-center font-BebasNeue text-white cursor-pointer;
 }
