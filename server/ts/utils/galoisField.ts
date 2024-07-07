@@ -1,5 +1,5 @@
 import { GaloisField, GaloisFields } from "../../../shared/customTypes";
-import { binToHex, hextoBin } from "./convert";
+import { binToHex, hextoBin } from "../../../shared/convert";
 
 export function binariseGF(GF: GaloisField) {
 

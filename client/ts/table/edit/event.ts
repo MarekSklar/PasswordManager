@@ -1,4 +1,4 @@
-import { hexToText } from "../../../../server/ts/utils/convert.js";
+import { hexToText } from "../../../../shared/convert.js";
 import { Record } from "../../../../shared/customTypes.js";
 import { hexData, processData } from "../../../../shared/data.js";
 import { isCompanyValid, isPasswordValid, isUsernameValid } from "./formValidation.js";

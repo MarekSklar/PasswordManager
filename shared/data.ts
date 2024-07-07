@@ -1,5 +1,5 @@
-import { Data} from "./customTypes.js";
-import { hexToText, textToHex } from "../server/ts/utils/convert.js";
+import { Data } from "./customTypes.js";
+import { hexToText, textToHex } from "./convert.js";
 import { randomString, randomNum } from "../server/ts/utils/random.js";
 import config from "./config.js";
 
