@@ -5,7 +5,7 @@ import config from "./config.js";
 
 export function normalizeData(data: string) {
 
-    const chars = Object.keys(config.charSet.charToHex);
+    const chars = Object.keys(config.charSet.charToHex).filter(item => item !== config.splitter.record && item !== config.splitter.unit);
     
     const length = data.length;
     const remainder = length % 16;

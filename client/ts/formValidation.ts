@@ -6,7 +6,7 @@ export function unsupportedChars(text: string) {
 
     let includesUnsupportedChars = false;
     for (let i = 0; i < text.length; i++)
-        if (!chars.includes(text[i])) {
+        if (!chars.includes(text[i]) || text[i] === config.splitter.record || text[i] === config.splitter.unit) {
             includesUnsupportedChars = true;
             break;
         }
