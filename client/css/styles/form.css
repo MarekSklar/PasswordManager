@@ -1,5 +1,5 @@
 .form-input-box {
-    @apply relative my-6;
+    @apply relative w-full my-6;
 }
 
 .form-label {
@@ -7,7 +7,7 @@
 }
 
 .form-input {
-    @apply w-112 h-16 pr-12 pl-4 text-base rounded-md outline-none border-2 border-solid border-heather-300 focus:border-heather-100 font-CarroisGothic text-white bg-heather-900;
+    @apply w-full h-16 pr-12 pl-4 text-base rounded-md outline-none border-2 border-solid border-heather-300 focus:border-heather-100 font-CarroisGothic text-white bg-heather-900;
 }
 
 .form-image {
@@ -15,5 +15,5 @@
 }
 
 .form-submit {
-    @apply px-5 py-1 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 text-center font-BebasNeue text-white cursor-pointer;
+    @apply h-fit px-5 py-1 text-xl rounded border-heather-300 hover:border-heather-100 border-solid border-2 text-center font-BebasNeue text-white whitespace-nowrap cursor-pointer;
 }
