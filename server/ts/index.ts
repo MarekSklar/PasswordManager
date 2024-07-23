@@ -1,6 +1,7 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
 import { login, saveData } from './preload/main.js';
+import { hexToText, textToHex } from '../../shared/convert.js';
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.  
 
@@ -16,6 +17,7 @@ const createWindow = () => {
         webPreferences: {
             preload: path.join(__dirname, './preload/preload.js')
         },
+        autoHideMenuBar: true,
     });
 
     // and load the index.html of the app.

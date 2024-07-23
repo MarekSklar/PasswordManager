@@ -1,4 +1,5 @@
 import { processData } from "../../../shared/data.js";
+import { endLoading, startLoading } from "../main.js";
 
 export function logout() {
     document.getElementById("logout").addEventListener("click", _ => {
@@ -10,6 +11,9 @@ export function logout() {
 
 export function saveData() {
     document.getElementById("save-files").addEventListener("click", _ => {
+
+        startLoading();
+
         const id = sessionStorage.getItem("id");
         const key = sessionStorage.getItem("key");
         const data = sessionStorage.getItem("data");
@@ -24,6 +28,8 @@ export function saveData() {
             link.download = `pass-file.txt`;
             link.click();
             URL.revokeObjectURL(url);
+
+            setTimeout(() => endLoading(), 1000);
         });
     });
 }

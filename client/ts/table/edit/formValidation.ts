@@ -1,22 +1,4 @@
-import { ASCII, bigSplitter, smallSplitter } from "../../../../shared/customTypes.js";
-
-function unsupportedChars(text: string) {
-
-    let includesNotASCIISymbols = false;
-    for (let i = 0; i < text.length; i++)
-        if (!ASCII.includes(text[i])) {
-            includesNotASCIISymbols = true;
-            break;
-        }
-    
-    return includesNotASCIISymbols;
-}
-
-function includesSplitter(text: string) {
-    
-    if (text.includes(smallSplitter) || text.includes(bigSplitter)) return true;
-    return false;
-}
+import { unsupportedChars } from "../../formValidation.js";
 
 export function isCompanyValid() {
     const companyInputValue = (document.getElementById("company-input") as HTMLInputElement).value;
@@ -25,8 +7,7 @@ export function isCompanyValid() {
     let errText = "";
 
     switch (true) {
-        case unsupportedChars(companyInputValue): errText = "ID includes unsupported characters. Only ASCII characters are supported."; break;
-        case includesSplitter(companyInputValue): errText = "ID includes forbidden group of characters. ('(X,,X)' or '!<0~0>!')"; break;
+        case unsupportedChars(companyInputValue): errText = "Company includes unsupported characters. Check config for more info."; break;
     }
 
     errTextElmnt.innerHTML = errText;
@@ -40,8 +21,7 @@ export function isUsernameValid() {
     let errText = "";
 
     switch (true) {
-        case unsupportedChars(usernameInputValue): errText = "ID includes unsupported characters. Only ASCII characters are supported."; break;
-        case includesSplitter(usernameInputValue): errText = "ID includes forbidden group of characters. ('(X,,X)' or '!<0~0>!')"; break;
+        case unsupportedChars(usernameInputValue): errText = "Username includes unsupported characters. Check config for more info."; break;
     }
 
     errTextElmnt.innerHTML = errText;
@@ -55,8 +35,7 @@ export function isPasswordValid() {
     let errText = "";
 
     switch (true) {
-        case unsupportedChars(passwordInputValue): errText = "ID includes unsupported characters. Only ASCII characters are supported."; break;
-        case includesSplitter(passwordInputValue): errText = "ID includes forbidden group of characters. ('(X,,X)' or '!<0~0>!')"; break;
+        case unsupportedChars(passwordInputValue): errText = "Password includes unsupported characters. Check config for more info."; break;
     }
 
     errTextElmnt.innerHTML = errText;

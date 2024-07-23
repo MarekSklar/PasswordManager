@@ -1,3 +1,5 @@
+import config from "./config.js";
+
 export function hextoBin(hex: string) {
 
     // Convert each hexadecimal digit to its binary equivalent
@@ -31,8 +33,9 @@ export function textToHex(text: string) {
     let hex = '';
   
     for (let i = 0; i < text.length; i++) {
-        const charCode = text.charCodeAt(i).toString(16);
-        hex += ('00' + charCode).slice(-2);
+        const character = text[i];
+        const hexByte = config.charSet.charToHex[character];
+        hex += hexByte;
     }
   
     return hex;
@@ -42,9 +45,9 @@ export function hexToText(hex: string) {
     let text = '';
 
     for (let i = 0; i < hex.length; i += 2) {
-        const hexByte = hex.substr(i, 2);
-        const charCode = parseInt(hexByte, 16);
-        text += String.fromCharCode(charCode);
+        const hexByte = hex.slice(i, i+2);
+        const character = config.charSet.hexToChar[hexByte];
+        text += character;
     }
 
     return text;

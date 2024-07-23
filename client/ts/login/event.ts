@@ -1,3 +1,4 @@
+import { startLoading } from "../main.js";
 import { isIdValid, isKeyValid } from "./formValidation.js";
 import { login } from "./main.js";
 
@@ -49,6 +50,7 @@ export function addEventListenerToSubmitLoginForm() {
             });
         }
 
+        startLoading();
         login(idInputValue, keyInputValue, getFileContent());
     });
 }
