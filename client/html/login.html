@@ -25,17 +25,17 @@
             </h1>
             <div class="w-full mt-5">
                 <div class="form-input-box">
-                    <label class="form-label cursor-pointer">File with passwords</label>
-                    <input id="pass-file" type="file" required="txt" accept=".txt" class="form-input pt-5 cursor-pointer file:hidden">
+                    <label class="form-label cursor-pointer" for="pass-file">File with passwords</label>
+                    <input id="pass-file" type="file" required="txt" accept=".txt" class="form-input pt-5 cursor-pointer file:hidden" name="pass-file">
                 </div>
                 <div class="form-input-box">
-                    <label class="form-label">Username</label>
-                    <input id="id-input" class="form-input">
+                    <label class="form-label" for="id-input">Username</label>
+                    <input id="id-input" class="form-input" name="id-input">
                     <img id="id-visible" class="form-image" src="../../assets/img/visibility.svg">
                 </div>
                 <div class="form-input-box">
-                    <label class="form-label">Password</label>
-                    <input id="key-input" class="form-input" type="password">
+                    <label class="form-label" for="key-input">Password</label>
+                    <input id="key-input" class="form-input" type="password" name="key-input">
                 </div>
                 <div class="flex mt-5">
                     <button id="submit-login-form" class="form-submit">Decipher</button>

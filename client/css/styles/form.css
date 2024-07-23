@@ -3,7 +3,7 @@
 }
 
 .form-label {
-    @apply absolute -top-3 left-5 px-1.5 text-xl font-BebasNeue text-heather-100 bg-heather-900;
+    @apply absolute -top-3 left-5 px-1.5 text-xl font-BebasNeue text-heather-100 bg-heather-900 cursor-text select-none;
 }
 
 .form-input {
